@@ -1,0 +1,532 @@
+/* General Body & Typography */
+body {
+    font-family: 'Noto Sans KR', sans-serif; /* Noto Sans KR can also be used for English, or you can switch to a different English-preferred font like 'Arial', 'Helvetica', sans-serif */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Layout Helpers */
+.horizontal-strip-layout {
+    padding: 60px 5%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.split-layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.split-layout > div {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2.5em;
+    color: #0056b3;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 2px;
+}
+
+
+/* Header */
+.main-header {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Constrain header width */
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+    width: auto;
+    display: block;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.1em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #ffd700; /* Gold color on hover */
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('Image/Main.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 150px 5%; /* Increased padding for more vertical space */
+    min-height: 600px; /* Ensure sufficient height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker background for text clarity */
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #eee;
+}
+
+/* About Us Section */
+.section-about-us {
+    background-color: #f8f8f8;
+}
+
+.about-us-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.about-text-content {
+    flex: 2; /* Takes more space */
+    min-width: 300px;
+}
+
+.about-image {
+    flex: 1; /* Takes less space */
+    min-width: 280px;
+    height: 350px; /* Fixed height for consistency */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-sub-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.sub-section-item {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center; /* Center content for sub-sections */
+}
+
+.sub-section-item h3 {
+    color: #0056b3;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.sub-section-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sub-section-item ul {
+    text-align: left; /* Align list items to left */
+    margin-top: 15px;
+    padding-left: 20px;
+    list-style: disc;
+}
+.sub-section-item ul li {
+    margin-bottom: 8px;
+}
+
+/* Strengths Section */
+.section-strengths {
+    background-color: #e6f2ff; /* Light blue background */
+}
+
+.strengths-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.strength-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.strength-item:nth-child(even) {
+    flex-direction: row-reverse; /* Z-pattern for even items */
+}
+
+.strength-image {
+    flex: 1;
+    min-width: 300px;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.strength-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.strength-text h3 {
+    color: #0056b3;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.strength-text ul {
+    list-style: decimal;
+    padding-left: 25px;
+}
+
+.strength-text ul li {
+    margin-bottom: 8px;
+}
+
+/* Activities Section */
+.section-activities {
+    background-color: #fff;
+}
+
+.activities-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.activities-content ul {
+    list-style: disc;
+    text-align: left;
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
+/* Vision & Values Section */
+.section-vision-values {
+    background-color: #f8f8f8;
+}
+
+.vision-content, .values-content {
+    text-align: center;
+}
+
+.vision-image, .values-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Products & Services Section */
+.section-products-services {
+    background-color: #e6f2ff;
+}
+
+.products-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.product-service-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.product-service-item h3 {
+    color: #0056b3;
+    font-size: 1.7em;
+    margin-bottom: 15px;
+}
+
+.product-service-item .item-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-service-item ul {
+    list-style: disc;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Proposals Section */
+.section-proposals {
+    background-color: #fff;
+}
+
+.proposals-content .proposal-item {
+    background-color: #f0f0f0; /* Slightly different background for sub-items */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.proposals-content .item-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Promotion Section */
+.section-promotion {
+    background-color: #e6f2ff;
+    text-align: center;
+}
+
+.promotion-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Us Section */
+.section-contact-us {
+    background-color: #fff;
+}
+
+.contact-content .contact-info {
+    text-align: left;
+}
+
+.contact-content .contact-info address,
+.contact-content .contact-info p,
+.contact-content .contact-info ul {
+    margin-bottom: 1em;
+}
+
+.contact-content .contact-info ul li {
+    margin-bottom: 0.5em;
+}
+
+.contact-image {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 5%;
+    font-size: 0.9em;
+}
+
+.footer-content p {
+    margin: 0 0 5px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .split-layout {
+        flex-direction: column;
+    }
+
+    .split-layout > div {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .about-us-grid,
+    .strength-item,
+    .strength-item.reversed {
+        flex-direction: column;
+    }
+
+    .about-text-content,
+    .about-image,
+    .strength-image,
+    .strength-text {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .products-services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .section-title h2 {
+        font-size: 2em;
+    }
+
+    .main-header {
+        padding: 10px 3%;
+    }
+
+    .hero-section {
+        padding: 100px 3%;
+    }
+
+    .horizontal-strip-layout {
+        padding: 40px 3%;
+    }
+
+    .strength-item, .product-service-item {
+        padding: 20px;
+    }
+}
